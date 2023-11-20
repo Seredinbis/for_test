@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  rabbitmq:
+    image: rabbitmq:3.12.6-management
+    container_name: rabbitmq_app
+    ports:
+      - "15555:15672"
+      - "5555:5672"
+    expose:
+      - 15672
+      - 5672
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apps
+
+  appu:
+    build:
+      context: .
+      dockerfile: DockerfileU
+    container_name: appu
