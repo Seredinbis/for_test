@@ -1,5 +1,5 @@
 # Используем базовый образ Python
-FROM python:3.8
+FROM python:3.10-alpine
 
 # Создаем директорию для приложения
 RUN mkdir /usr/src/pure_celery
